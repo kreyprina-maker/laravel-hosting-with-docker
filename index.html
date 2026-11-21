@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7ff">
+  <meta name="description" content="A friendly English grammar and practice hub for beginner Khmer speakers.">
+  <title>English Grammar Hub — Learn one step at a time</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="English Grammar Hub home">
+      <span class="brand-mark" aria-hidden="true">Aa</span>
+      <span>English <strong>Grammar Hub</strong></span>
+    </a>
+    <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">
+      <span aria-hidden="true">☰</span>
+    </button>
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#tenses">Tenses</a>
+      <a href="#listening">Listening</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#games">Games</a>
+      <a href="#practice">Practice</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+      <span aria-hidden="true" id="themeIcon">☾</span><span id="themeText">Dark mode</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero page-section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR FRIENDLY ENGLISH CLASSROOM</p>
+        <h1>Small lessons.<br><span>Big confidence.</span></h1>
+        <p class="hero-description">Understand English grammar, listen, speak, and practice at your own pace. Made for Khmer-speaking beginners.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#tenses">Explore the tenses <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="#practice">Start practicing</a>
+        </div>
+        <div class="hero-note"><span aria-hidden="true">🌱</span> You don't need to be perfect. Just keep going.</div>
+      </div>
+      <div class="hero-art" aria-label="English learning illustration">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-main"><span class="art-sparkle">✦</span><span class="art-aa">Aa</span><strong>One word at a time</strong><small>Learn • Practice • Grow</small></div>
+        <div class="art-chip chip-hello">Hello! <span>👋</span></div>
+        <div class="art-chip chip-star">✦ <span id="heroStars">0</span> stars</div>
+        <div class="art-leaf">✿</div>
+      </div>
+      <div class="stats-grid" aria-label="Your learning progress">
+        <article class="stat-card"><span class="stat-icon stat-purple" aria-hidden="true">✓</span><div><strong id="statTenses">0 / 12</strong><span>Tenses learned</span></div></article>
+        <article class="stat-card"><span class="stat-icon stat-yellow" aria-hidden="true">★</span><div><strong id="statScore">0</strong><span>Practice points</span></div></article>
+        <article class="stat-card"><span class="stat-icon stat-green" aria-hidden="true">🔥</span><div><strong><span id="statStreak">0</span> days</strong><span>Learning streak</span></div></article>
+        <article class="stat-card"><span class="stat-icon stat-pink" aria-hidden="true">🎯</span><div><strong id="statDone">0</strong><span>Activities done</span></div></article>
+      </div>
+    </section>
+
+    <section class="page-section tenses-section" id="tenses">
+      <div class="section-heading">
+        <div><p class="eyebrow">GRAMMAR MADE FRIENDLY</p><h2>Explore the 12 tenses</h2><p>Choose a tense to see its meaning, formula, examples, and common mistakes.</p></div>
+        <span class="section-sticker" aria-hidden="true">📚</span>
+      </div>
+      <div class="tense-groups" id="tenseGroups" aria-label="English tense lessons"></div>
+      <article class="lesson-panel" id="lessonPanel" aria-live="polite">
+        <div class="empty-lesson"><span aria-hidden="true">👆</span><div><strong>Pick a tense to begin</strong><p>Your lesson will appear here with examples and Khmer translations.</p></div></div>
+      </article>
+      <div class="passive-section">
+        <div class="passive-heading">
+          <div><p class="eyebrow">A DIFFERENT WAY TO SAY IT</p><h3>Passive voice</h3><p>Focus on the person or thing receiving the action. Choose a pattern to learn it.</p></div>
+          <span class="section-sticker" aria-hidden="true">🔄</span>
+        </div>
+        <div class="passive-choices" id="passiveChoices" aria-label="Passive voice lessons"></div>
+        <article class="lesson-panel passive-lesson-panel" id="passiveLessonPanel" aria-live="polite"></article>
+        <div class="passive-practice">
+          <div class="passive-heading">
+            <div><p class="eyebrow">TRY IT YOURSELF</p><h3>Passive voice practice</h3><p>Answer four quick questions and get an explanation after each one.</p></div>
+            <span class="section-sticker" aria-hidden="true">✏️</span>
+          </div>
+          <div class="practice-card" id="passivePracticePanel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section activity-section" id="listening">
+      <div class="section-heading">
+        <div><p class="eyebrow">LISTEN & UNDERSTAND</p><h2>Listening practice</h2><p>Listen carefully, then check what you understood.</p></div>
+        <span class="section-sticker" aria-hidden="true">🎧</span>
+      </div>
+      <div class="activity-card listening-card">
+        <div class="activity-intro"><span class="activity-icon icon-blue" aria-hidden="true">♫</span><div><h3>Listen to a short conversation</h3><p>Press play to hear each line. Choose slow or normal speed.</p></div></div>
+        <div class="speed-control" role="group" aria-label="Speech speed">
+          <span>Speed</span><button class="speed-button is-active" data-rate="0.75" aria-pressed="true">Slow</button><button class="speed-button" data-rate="1" aria-pressed="false">Normal</button>
+        </div>
+        <div class="dialogue-list" id="dialogueList"></div>
+        <fieldset class="question-box"><legend>Quick check</legend><p id="listeningQuestion"></p><div id="listeningAnswers" class="answer-options"></div><p class="feedback" id="listeningFeedback" aria-live="polite"></p></fieldset>
+      </div>
+    </section>
+
+    <section class="page-section activity-section" id="speaking">
+      <div class="section-heading">
+        <div><p class="eyebrow">SAY IT OUT LOUD</p><h2>Speaking practice</h2><p>Listen to a sentence, then try saying it clearly.</p></div>
+        <span class="section-sticker" aria-hidden="true">🗣️</span>
+      </div>
+      <div class="activity-card speaking-card">
+        <div class="activity-intro"><span class="activity-icon icon-pink" aria-hidden="true">Aa</span><div><h3>Your turn to speak</h3><p>Say the sentence below. Your browser will turn your speech into text.</p></div></div>
+        <div class="target-sentence"><span class="target-label">TODAY'S SENTENCE</span><p id="speakingTarget"></p><button class="text-button" id="speakTargetButton" aria-label="Hear the example sentence">🔊 Hear example</button></div>
+        <button class="button button-primary record-button" id="recordButton"><span aria-hidden="true">🎙️</span> Start speaking</button>
+        <p class="support-message" id="speechSupport" role="status"></p>
+        <div class="speech-result" id="speechResult" aria-live="polite" hidden>
+          <p><strong>You said:</strong> <span id="recognizedText"></span></p>
+          <div class="score-row"><strong id="speechScore">0%</strong><span id="speechFeedback"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section games-section" id="games">
+      <div class="section-heading">
+        <div><p class="eyebrow">LEARN WHILE YOU PLAY</p><h2>Grammar game corner</h2><p>Choose a quick game. Earn points and collect stars!</p></div>
+        <span class="section-sticker" aria-hidden="true">🎮</span>
+      </div>
+      <div class="game-tabs" role="tablist" aria-label="Choose a grammar game">
+        <button class="game-tab is-active" role="tab" aria-selected="true" aria-controls="gamePanel" data-game="quiz">⚡ Quiz</button>
+        <button class="game-tab" role="tab" aria-selected="false" aria-controls="gamePanel" data-game="fill">✍️ Fill in</button>
+        <button class="game-tab" role="tab" aria-selected="false" aria-controls="gamePanel" data-game="builder">🧩 Builder</button>
+        <button class="game-tab" role="tab" aria-selected="false" aria-controls="gamePanel" data-game="memory">🃏 Memory</button>
+      </div>
+      <div class="game-panel" id="gamePanel" role="tabpanel" tabindex="0"></div>
+    </section>
+
+    <section class="page-section practice-section" id="practice">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR NEXT STEP</p><h2>Practice all 12 tenses</h2><p>One question for each tense, with instant feedback and explanations.</p></div>
+        <span class="section-sticker" aria-hidden="true">✏️</span>
+      </div>
+      <div class="practice-card" id="practicePanel"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">Aa</span><span>English <strong>Grammar Hub</strong></span></a><p>Made for curious learners. Keep practicing, one step at a time. 🌼</p><a href="#home" class="back-top">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
